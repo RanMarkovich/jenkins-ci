@@ -3,9 +3,9 @@ pipeline {
     docker 'python:3.6.1'
   }
   stages {
-    stage('hello-world') {
+    stage('build') {
       steps {
-        sh 'echo hello-world!'
+        sh 'docker build app/'
       }
     }
   }
