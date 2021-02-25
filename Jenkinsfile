@@ -6,7 +6,7 @@ pipeline {
     dockerfile {filename 'app/Dockerfile'}
         }
       steps {
-        sh 'ls -l'
+        sh 'pytest app/tests/test_app.py'
       }
     }
   }
