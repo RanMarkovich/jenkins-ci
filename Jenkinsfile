@@ -1,12 +1,12 @@
 pipeline {
    agent none
   stages {
-    stage('build') {
+    stage('test') {
     agent {
     dockerfile {filename 'app/Dockerfile'}
         }
       steps {
-        sh 'built!'
+        sh 'pytest tests/test_app.py'
       }
     }
   }
