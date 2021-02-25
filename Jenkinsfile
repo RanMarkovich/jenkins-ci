@@ -6,7 +6,7 @@ pipeline {
     dockerfile {filename 'app/Dockerfile'}
         }
       steps {
-        sh 'pytest tests/test_app.py'
+        sh 'pwd'
       }
     }
   }
