@@ -1,11 +1,11 @@
 pipeline {
    agent {
-    docker 'python:3.6.1'
+    dockerfile {filename 'app/Dockerfile'}
   }
   stages {
-    stage('build') {
+    stage('sucess') {
       steps {
-        sh 'docker build app/'
+        sh 'echo sucess'
       }
     }
   }
