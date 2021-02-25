@@ -1,11 +1,12 @@
 pipeline {
-   agent {
-    dockerfile {filename 'app/Dockerfile'}
-  }
+   agent none
   stages {
-    stage('sucess') {
+    stage('build') {
+    agent {
+    dockerfile {filename 'app/Dockerfile'}
+        }
       steps {
-        sh 'echo sucess'
+        sh 'built!'
       }
     }
   }
