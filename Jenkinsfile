@@ -6,7 +6,7 @@ pipeline {
     dockerfile {filename 'app/Dockerfile'}
         }
       steps {
-        sh 'pwd'
+        sh 'ls -l'
       }
     }
   }
