@@ -2,4 +2,4 @@
 .venv
 jenkins_home
 .pytest_cache
-app/tests/__pycache__/
+__pycache__

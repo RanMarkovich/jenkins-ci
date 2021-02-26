@@ -17,6 +17,12 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r app/requirements.txt
+      # Step 3: build
+      - run:
+          name: flask
+          command: |
+            . venv/bin/activate
+            docker-compose up -d --build flask-app
       # Step 3: run tests
       - run:
           name: run tests
