@@ -1,8 +1,9 @@
-version: "3.7"
+version: '2'
 services:
-  flask-app:
-    container_name: flask-app
-    build:
-      context: ./app
+  jenkins:
+    build: .
     ports:
-    - 5000:5000
+      - 8080:8080
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
