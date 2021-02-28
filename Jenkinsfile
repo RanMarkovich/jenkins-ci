@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('install test dependencies') {
             steps {
-                sh 'pip install pytest'
+                sh 'pip install requirements.txt'
             }
         }
         stage('test app') {
