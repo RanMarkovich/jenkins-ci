@@ -5,9 +5,6 @@ node {
   stage('run app') {
     sh 'docker run -d -p 5000:5000 --name=app app/app.y'
   }
-  stage('run app') {
-    sh 'docker run -d -p 5000:5000 --name=app app/app.y'
-  }
 }
 pipeline {
     agent { docker { image 'python:3.5.1' } }
