@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('test app') {
             steps {
-                sh 'python --version'
+                sh 'ls -l'
             }
         }
     }
