@@ -1,9 +1,9 @@
 node {
   stage('build app') {
-    sh 'docker build -t app/app.y /var/jenkins_home/workspace/firs/app/'
+    sh 'docker-compose up -d --build app'
   }
   stage('run app') {
-    sh 'docker run -d -p 5000:50000 --name=app app/app.y'
+    sh 'docker run -d -p 5000:5000 --name=app app/app.y'
   }
 }
 pipeline {
