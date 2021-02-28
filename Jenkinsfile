@@ -14,9 +14,9 @@ pipeline {
                 sh 'ls -l'
             }
         }
-    }
-    post {
+     post {
         always {
             sh 'docker rm -f app'
      }
+    }
 }
