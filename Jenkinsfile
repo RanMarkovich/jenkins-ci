@@ -13,9 +13,10 @@ pipeline {
             steps {
                 sh 'pip install pytest'
             }
+        }
         stage('test app') {
             steps {
-                sh 'pytest app/'
+                sh 'pytest /app'
             }
         }
     }
