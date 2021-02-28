@@ -9,15 +9,19 @@ node {
 pipeline {
     agent { docker { image 'python:3.5.1' } }
     stages {
+        stage('install test dependencies') {
+            steps {
+                sh 'pip install pytest'
+            }
         stage('test app') {
             steps {
-                sh 'ls -l'
+                sh 'pytest app/'
             }
         }
     }
     post {
         always {
-            sh 'docker rm -f app'
+            echo 'done!'
         }
     }
 }
