@@ -2,9 +2,6 @@ node {
   stage('build app') {
     sh 'docker-compose up -d --build app'
   }
-  stage('run app') {
-    sh 'docker run -d -p 5000:5000 --name=app app/app.y'
-  }
 }
 pipeline {
     agent { docker { image 'python:3.7' } }
