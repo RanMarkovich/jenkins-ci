@@ -15,4 +15,8 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            sh 'docker rm -f app'
+     }
 }
