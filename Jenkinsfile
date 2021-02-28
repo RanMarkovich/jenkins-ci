@@ -16,7 +16,7 @@ pipeline {
         }
         stage('test app') {
             steps {
-                sh 'pytest ./app/tests'
+                sh 'ls -l'
             }
         }
     }
